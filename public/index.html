@@ -33,6 +33,8 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -43,9 +45,6 @@
     <!-- Font Awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <header>
-
-  </header>
   <body>
     <!-- Top nav bar (fixed) -->
     
@@ -55,15 +54,35 @@
         </div>
         <div class="right-navbar"> 
           <span><strong>Write </strong> a new tweet </span>
-          <div>
-            <i class="arrow fa-solid fa-angles-down"></i>
+          <div class="arrow">
+            <i class="fa-solid fa-angles-down"></i>
           </div>
           </div>
       </nav>
 
+      <header>
+        <div class="header-img">
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <h2>Your Name</h2>
+    
+    </header>
  
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form class="tweet-form"  method="Post" action="/tweets/">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="tweet-button-container">
+            <button class="tweet-btn"  type="submit">Tweet</button>
+            <output name="counter" class="twt-counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+
+    </main>
   </body>
 </html>

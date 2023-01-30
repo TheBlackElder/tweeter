@@ -1,0 +1,46 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.tweet-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 95px;
+ 
+
+
+}
+
+.tweet-button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+
+
+} 
+
+.tweet-btn {
+  background-color:  #4056A1;
+   color: #fff;
+    border:none;
+    border-radius:3px;
+    font-family: 'bungee', cursive;
+    font-size: large;
+    padding: 5px;
+    
+  
+ 
+
+}
+.twt-counter {
+  font-family: 'bungee', cursive;
+  font-size: large;
+
+}
+
+
+
+

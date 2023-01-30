@@ -20,6 +20,17 @@ body {
   font-size: 24px; 
 }
 
+main {
+  width: 90%;
+  background-color: #f4f1ec;
+  display: flex; 
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -27,7 +38,7 @@ body {
    /* Bungee font for header  */
   
   /* Source Sans Pro for body */
-  body { 
+  html { 
     font-family: 'Source Sans Pro', sans-serif;
   
   }
