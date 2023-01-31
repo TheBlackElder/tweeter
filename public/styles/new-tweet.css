@@ -4,22 +4,23 @@
   align-items: center;
 
 }
+#tweet-text{
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #545149;
+}
 .tweet-form {
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 95px;
- 
-
+  height: 90px;  
 
 }
 
-.tweet-button-container {
+.tweet-form-footer{
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
-
-
+  margin-top: 15px;
 } 
 
 .tweet-btn {
@@ -30,15 +31,12 @@
     font-family: 'bungee', cursive;
     font-size: large;
     padding: 5px;
-    
-  
+    cursor: pointer;
  
-
 }
-.twt-counter {
+.tweet-counter {
   font-family: 'bungee', cursive;
   font-size: large;
-
 }
 
 
