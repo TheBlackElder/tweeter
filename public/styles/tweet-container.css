@@ -43,15 +43,18 @@
 }
 
 .tweet-handle {
-  color: lightgray;
+  color: rgb(178, 176, 176);
 }
 
+.fa-solid, .fas {
+  padding-right: .5em;
+}
 .fa-flag:hover {
-  color: coral;
+  color: #4056A1;
 }
 .fa-retweet:hover {
-  color: coral;
+  color: #4056A1;
 }
 .fa-heart:hover {
-  color: coral;
+  color: #4056A1;
 }
