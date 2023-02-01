@@ -60,7 +60,7 @@ $(document).ready(function () {
 </span>
 <footer class="tweet-footerIcons" >
   <label class="tweet-time">
-    ${tweet.created_at}
+    ${timeago.format(tweet.created_at)}
   </label>
   <div >
     <i class="fa-solid fa-flag"></i>
@@ -74,17 +74,29 @@ $(document).ready(function () {
     return $tweet;
   };
 
-  renderTweets(data);
-
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
-    $.ajax('/tweets', {method:'POST', data:$(this).serialize()}).then(()=>{
-      console.log("success");
-    });
-     
+    let tweetText = $("#tweet-text").val();
+    let maxTweetLength = 140;
+    if (tweetText.length === 0) {
+      alert("No content detected");
+    } else if (tweetText.length > maxTweetLength) {
+      alert("Surpassed valid character limit of 140 characters");
+    } else {
+      console.log("tweet text is:", tweetText);
+      $.ajax("/tweets", { method: "POST", data: $(this).serialize() }).then(
+        () => {
+          console.log("success");
+        }
+      );
+    }
   });
 
-
+  const loadTweets = function () {
+    $.ajax("/tweets/", { method: "GET" }).then((tweets) =>
+      renderTweets(tweets)
+    );
+  };
+  loadTweets();
 });
-
 
