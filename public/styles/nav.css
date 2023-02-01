@@ -1,15 +1,18 @@
 nav {
-  background-color: #4056A1;
-  color: #ffffff;
-  height: 120px;
-  width: 100%;
-  padding: 1em 1.5em 0em 1.5em;
-  position: fixed;
-  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: #4056A1;
+  color: #ffffff;
+  height: 120px;
+  width: 100%;
+  padding-left:1.5em;
+  padding-right:1.5em;
+  /* padding: 1em 1.5em 0em 1.5em; */
+  position: fixed;
+  top: 0;
+ 
 
 
 
