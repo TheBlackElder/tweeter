@@ -29,13 +29,13 @@
 } 
 
 .tweet-btn {
-  background-color:  #4056A1;
+  background-color:   rgb(29, 155, 240);
    color: #fff;
     border:none;
     border-radius:3px;
     font-family: 'bungee', cursive;
     font-size: large;
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
   
 }

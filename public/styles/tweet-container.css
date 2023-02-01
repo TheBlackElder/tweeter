@@ -3,16 +3,21 @@
   justify-content: space-between;
 }
 
-.tweet-container {
+.tweets {
   border: 3px solid;
   margin: 10px 0px;
   width: 100%;
   padding: 1em;
 }
 
-.tweet-container:hover {
+.tweets:hover {
   box-shadow: 8px 6px 5px rgba(173, 170, 170, 0.8);
 }
+
+.tweets:hover .tweet-handle {
+  text-shadow: rgba(173, 170, 170, 0.8) -1px 0px 2px;
+}
+
 
 .tweet-footerIcons {
   font-size: 60%;
@@ -46,15 +51,16 @@
   color: rgb(178, 176, 176);
 }
 
+
 .fa-solid, .fas {
   padding-right: .5em;
 }
 .fa-flag:hover {
-  color: #4056A1;
+  color:  rgb(29, 155, 240)
 }
 .fa-retweet:hover {
-  color: #4056A1;
+  color:  rgb(29, 155, 240);
 }
 .fa-heart:hover {
-  color: #4056A1;
+  color:  rgb(29, 155, 240);
 }
