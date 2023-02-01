@@ -1,13 +1,13 @@
 .tweet-header {
   display: flex;
-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .tweet-container {
   border: 3px solid;
   margin: 10px 0px;
   width: 100%;
-  padding: 10px;
+  padding: 1em;
 }
 
 .tweet-container:hover {
@@ -18,34 +18,32 @@ justify-content: space-between;
   font-size: 60%;
   display: flex;
   justify-content: space-between;
-  padding: 0% 3% 3% 3%;
 }
 
-.tweet-input {
+.tweet-body {
   background: transparent;
   border: none;
   border-bottom: 3px solid #545149;
   width: 100%;
   display: flex;
   flex-direction: row;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .tweet-headerProfile {
   display: flex;
   justify-content: flex-start;
-  /* height: 90px; */
-  width: 90px ;
-
+  width: 90px;
 }
 .tweet-time {
-  display:flex;
-  justify-content: flex-start ;
-
+  display: flex;
+  justify-content: flex-start;
 }
 
 .tweet-handle {
-  color:lightgray;
-
+  color: lightgray;
 }
 
 .fa-flag:hover {
@@ -57,4 +55,3 @@ justify-content: space-between;
 .fa-heart:hover {
   color: coral;
 }
-

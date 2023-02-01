@@ -5,6 +5,7 @@
   width: 100%;
 
 }
+
 #tweet-text{
   background: transparent;
   border: none;
@@ -19,19 +20,6 @@
   width: 100%;
 
 }
-
-/* 
-textarea {
-  border: none;
-  background-color: transparent;
-  resize: none;
-  outline: none; 
-  font-weight: bold;
-  border-bottom: 3px solid black;
-  width: 90vw;
-  height: 40px;
-} */
-
 
 .tweet-form-footer{
   display: flex;

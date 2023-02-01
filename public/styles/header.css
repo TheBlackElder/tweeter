@@ -5,10 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
   margin-top: 120px;
-
-background-color: blanchedalmond;
-background-image: url("https://www.transparenttextures.com/patterns/gradient-squares.png");
+  background-color: blanchedalmond;
+  background-image: url("https://www.transparenttextures.com/patterns/gradient-squares.png");
   
 }
