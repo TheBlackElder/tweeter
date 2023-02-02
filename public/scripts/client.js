@@ -6,7 +6,7 @@
 
 $(document).ready(function () {
 
-
+// toggle tweet textarea 
   $(".right-navbar").on("click", function () {
     $('.new-tweet').toggle();
     $('#tweet-text').focus();
@@ -67,25 +67,28 @@ $(document).ready(function () {
   
     let tweetText = $("#tweet-text").val();
     let maxTweetLength = 140;
-    console.log(tweetText.length);
+    console.log("tweet length", tweetText.length);
     if (tweetText.length === 0) {
      
       const errorText = $('<i class="fa-solid fa-triangle-exclamation"></i> <span>This field is empty, compose your tweet.</span>');
       $('.new-tweet-error').html(errorText);
       $('.new-tweet-error').slideDown();
+      // $('.new-tweet-error').slideToggle();
      
     } else if (tweetText.length > maxTweetLength) {
       
       const errorText = $('<i class="fa-solid fa-triangle-exclamation"></i> <span>This field cannot exceed 140 characters</span>');
       $('.new-tweet-error').html(errorText);
       $('.new-tweet-error').slideDown();
+      // $('.new-tweet-error').slideToggle();
     
     } else {
+      // $('.new-tweet-error').slideToggle();
       $('.new-tweet-error').slideUp();
       $.ajax("/tweets", { method: "POST", data: $(this).serialize() }).then(
         () => {
           console.log("success");
-          $(".tweet-container").empty();
+          $("#tweet-container").empty();
           $('.tweet-form')[0].reset();
           loadTweets();
         }
@@ -94,13 +97,15 @@ $(document).ready(function () {
   });
 
  
-
   const loadTweets = function () {
-    $.ajax("/tweets/", { method: "GET" }).then((tweets) =>
+    $.ajax("/tweets/", { method: "GET" }).then((tweets) => {
+    console.log("this tweets", tweets)
       renderTweets(tweets)
+    }
     );
   };
   loadTweets();
+
 });
 
 

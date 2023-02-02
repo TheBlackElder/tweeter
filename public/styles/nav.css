@@ -15,11 +15,8 @@ nav {
  
  }
 .left-navbar {
-  font-family: 'Bungee', cursive;
-  
+  font-family: 'Bungee', cursive;  
 }
-
-
 
 
 .right-navbar {
@@ -31,6 +28,7 @@ nav {
   align-items: center;
   cursor: pointer;
 }
+
 
 .arrow {
   animation: UpDown 3.5s linear infinite;
