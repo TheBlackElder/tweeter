@@ -15,6 +15,7 @@ nav {
 }
 .left-navbar {
   font-family: "Bungee", cursive;
+  font-size: xx-large;
 }
 
 .right-navbar {
@@ -25,6 +26,7 @@ nav {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  padding-top: 24px;
 }
 
 .arrow {

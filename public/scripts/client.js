@@ -61,7 +61,7 @@ $(document).ready(function () {
     return $tweet;
   };
 
-  // submit new tweet with a form with error conditions
+  // submit new tweet with a form with error conditions to toggle
 
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
@@ -75,22 +75,21 @@ $(document).ready(function () {
       );
       $(".new-tweet-error").html(errorText);
       $(".new-tweet-error").slideDown();
-      // $('.new-tweet-error').slideToggle();
     } else if (tweetText.length > maxTweetLength) {
       const errorText = $(
         '<i class="fa-solid fa-triangle-exclamation"></i> <span>This field cannot exceed 140 characters.</span>'
       );
       $(".new-tweet-error").html(errorText);
       $(".new-tweet-error").slideDown();
-      // $('.new-tweet-error').slideToggle();
+  
     } else {
-      // $('.new-tweet-error').slideToggle();
       $(".new-tweet-error").slideUp();
       $.ajax("/tweets", { method: "POST", data: $(this).serialize() }).then(
         () => {
           console.log("success");
           $("#tweet-container").empty();
           $(".tweet-form")[0].reset();
+          $(".tweet-counter").text(140);
           loadTweets();
         }
       );
