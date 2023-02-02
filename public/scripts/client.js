@@ -70,13 +70,13 @@ $(document).ready(function () {
     console.log(tweetText.length);
     if (tweetText.length === 0) {
      
-      const errorText = $('<i class="fa-solid fa-triangle-exclamation"></i> <span>No content detected</span>');
+      const errorText = $('<i class="fa-solid fa-triangle-exclamation"></i> <span>This field is empty, compose your tweet.</span>');
       $('.new-tweet-error').html(errorText);
       $('.new-tweet-error').slideDown();
      
     } else if (tweetText.length > maxTweetLength) {
       
-      const errorText = $('<i class="fa-solid fa-triangle-exclamation"></i> <span>Surpassed valid character limit of 140 characters</span>');
+      const errorText = $('<i class="fa-solid fa-triangle-exclamation"></i> <span>This field cannot exceed 140 characters</span>');
       $('.new-tweet-error').html(errorText);
       $('.new-tweet-error').slideDown();
     

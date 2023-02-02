@@ -35,6 +35,7 @@ nav {
 .arrow {
   animation: UpDown 3.5s linear infinite;
   position: relative;
+  color: blanchedalmond;
 }
 @keyframes UpDown {
   0% {
