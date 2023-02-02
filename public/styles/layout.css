@@ -26,7 +26,6 @@ body {
 main {
   width: 90%;
   background-color: #f4f1ec;
-  /* display: flex;  */
   flex-direction: column;
   justify-content: center;
   align-items: center;

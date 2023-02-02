@@ -1,11 +1,4 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(document).ready(function () {
-
   // toggle tweet textarea from navbar
   $(".right-navbar").on("click", function () {
     $(".new-tweet").toggle();
@@ -21,16 +14,14 @@ $(document).ready(function () {
 
   // prepend tweets to container
   const renderTweets = function (tweets) {
- 
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $("#tweet-container").prepend($tweet);
     }
   };
 
-  // access tweet database to create new tweet 
+  // access tweet database to create new tweet
   const createTweetElement = function (tweet) {
-   
     let $tweet = `
 <article class="tweets" >
 <header class="tweet-header" >
@@ -57,7 +48,6 @@ $(document).ready(function () {
 </footer>
 </article>
 `;
-
     return $tweet;
   };
 
@@ -81,7 +71,6 @@ $(document).ready(function () {
       );
       $(".new-tweet-error").html(errorText);
       $(".new-tweet-error").slideDown();
-  
     } else {
       $(".new-tweet-error").slideUp();
       $.ajax("/tweets", { method: "POST", data: $(this).serialize() }).then(
@@ -96,7 +85,7 @@ $(document).ready(function () {
     }
   });
 
-  // load tweets to page from tweets route 
+  // load tweets to page from tweets route
   const loadTweets = function () {
     $.ajax("/tweets/", { method: "GET" }).then((tweets) => {
       console.log("this tweets", tweets);
