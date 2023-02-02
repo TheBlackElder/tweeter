@@ -1,0 +1,44 @@
+#page-scrollUp {
+  display: none;
+  position: fixed; 
+  color: white;
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none;
+  background-color: rgb(29, 155, 240);  
+  padding: 22px; 
+  /* border-radius: 60px; 
+  width: 60px;
+  height: 60px; */
+  height: 100px;
+  width: 100px;
+  border-radius: 60%;
+  font-size: 55px;
+
+ 
+
+}
+
+#page-scrollUp:hover {
+  background-color: rgb(105, 178, 227);
+  box-shadow: 8px 6px 5px rgba(173, 170, 170, 0.8);
+  cursor: pointer;
+}
+
+#page-scrollUp {
+  animation: DownUp 3.5s linear infinite;
+}
+
+@keyframes DownUp {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 0.3em;
+  }
+  100% {
+    bottom: 0;
+  }
+}

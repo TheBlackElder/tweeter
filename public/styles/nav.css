@@ -3,7 +3,6 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #4056A1; */
   background-color:  rgb(29, 155, 240);
  
   color: #ffffff;
@@ -11,7 +10,7 @@ nav {
   width: 100%;
   padding-left:1.5em;
   padding-right:1.5em;
-  position: fixed;
+  position: absolute;
   top: 0;
  
  }
@@ -19,6 +18,9 @@ nav {
   font-family: 'Bungee', cursive;
   
 }
+
+
+
 
 .right-navbar {
   font-family: 'Source Sans Pro', sans-serif;
@@ -39,7 +41,7 @@ nav {
     bottom: 0;
   }
   50% {
-    bottom: 0.2em;
+    bottom: 0.3em;
   }
   100% {
     bottom: 0;
