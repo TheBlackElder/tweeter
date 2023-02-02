@@ -6,32 +6,31 @@
 
 $(document).ready(function () {
 
-// toggle tweet textarea 
+  // toggle tweet textarea from navbar
   $(".right-navbar").on("click", function () {
-    $('.new-tweet').toggle();
-    $('#tweet-text').focus();
+    $(".new-tweet").toggle();
+    $("#tweet-text").focus();
   });
 
+  // escape function to avoid XSS
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  // prepend tweets to container
   const renderTweets = function (tweets) {
-    console.log("Which tweets", tweets);
-   
-    // loops through tweets
+ 
     for (let tweet of tweets) {
-      // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
-      // takes return value and appends it to the tweets container
       $("#tweet-container").prepend($tweet);
     }
   };
 
+  // access tweet database to create new tweet 
   const createTweetElement = function (tweet) {
-    console.log("These tweets", tweet);
+   
     let $tweet = `
 <article class="tweets" >
 <header class="tweet-header" >
@@ -62,50 +61,48 @@ $(document).ready(function () {
     return $tweet;
   };
 
+  // submit new tweet with a form with error conditions
+
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
-  
+
     let tweetText = $("#tweet-text").val();
     let maxTweetLength = 140;
     console.log("tweet length", tweetText.length);
     if (tweetText.length === 0) {
-     
-      const errorText = $('<i class="fa-solid fa-triangle-exclamation"></i> <span>This field is empty, compose your tweet.</span>');
-      $('.new-tweet-error').html(errorText);
-      $('.new-tweet-error').slideDown();
+      const errorText = $(
+        '<i class="fa-solid fa-triangle-exclamation"></i> <span>This field is empty, compose your tweet.</span>'
+      );
+      $(".new-tweet-error").html(errorText);
+      $(".new-tweet-error").slideDown();
       // $('.new-tweet-error').slideToggle();
-     
     } else if (tweetText.length > maxTweetLength) {
-      
-      const errorText = $('<i class="fa-solid fa-triangle-exclamation"></i> <span>This field cannot exceed 140 characters</span>');
-      $('.new-tweet-error').html(errorText);
-      $('.new-tweet-error').slideDown();
+      const errorText = $(
+        '<i class="fa-solid fa-triangle-exclamation"></i> <span>This field cannot exceed 140 characters.</span>'
+      );
+      $(".new-tweet-error").html(errorText);
+      $(".new-tweet-error").slideDown();
       // $('.new-tweet-error').slideToggle();
-    
     } else {
       // $('.new-tweet-error').slideToggle();
-      $('.new-tweet-error').slideUp();
+      $(".new-tweet-error").slideUp();
       $.ajax("/tweets", { method: "POST", data: $(this).serialize() }).then(
         () => {
           console.log("success");
           $("#tweet-container").empty();
-          $('.tweet-form')[0].reset();
+          $(".tweet-form")[0].reset();
           loadTweets();
         }
       );
     }
   });
 
- 
+  // load tweets to page from tweets route 
   const loadTweets = function () {
     $.ajax("/tweets/", { method: "GET" }).then((tweets) => {
-    console.log("this tweets", tweets)
-      renderTweets(tweets)
-    }
-    );
+      console.log("this tweets", tweets);
+      renderTweets(tweets);
+    });
   };
   loadTweets();
-
 });
-
-

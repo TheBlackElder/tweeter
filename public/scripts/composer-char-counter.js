@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  console.log("We are ready!");
+  // to monitor the character count limit
 
   $("#tweet-text").on("input", function () {
     let count = $(".tweet-counter");
@@ -11,28 +11,7 @@ $(document).ready(function () {
       count.addClass("countLimit");
     } else {
       count.removeClass("countLimit");
-      $('.new-tweet-error').slideUp();
+      $(".new-tweet-error").slideUp();
     }
   });
 });
-
-// $(document).ready(function () {
-//   console.log("We are ready!");
-
-//   $("#tweet-text").on("input", function () {
-//     let maxChars = 10;
-//     const input = $(this);
-//     const form = input.closest('.counter');
-//     const counter = form.find('.counter');
-//     let charsEntered = input.val().length;
-//     let charsRemaining = maxChars - charsEntered;
-//     counter.text(charsRemaining);
-
-//     if (charsRemaining < 0) {
-//       counter.addClass("countLimit");
-//     } else {
-//       counter.removeClass("countLimit");
-//     }
-//   });
-// });
-

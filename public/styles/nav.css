@@ -3,24 +3,22 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color:  rgb(29, 155, 240);
- 
+  background-color: rgb(29, 155, 240);
+
   color: #ffffff;
   height: 120px;
   width: 100%;
-  padding-left:1.5em;
-  padding-right:1.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   position: absolute;
   top: 0;
- 
- }
+}
 .left-navbar {
-  font-family: 'Bungee', cursive;  
+  font-family: "Bungee", cursive;
 }
 
-
 .right-navbar {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: x-large;
   display: flex;
   justify-content: center;
@@ -28,7 +26,6 @@ nav {
   align-items: center;
   cursor: pointer;
 }
-
 
 .arrow {
   animation: UpDown 3.5s linear infinite;

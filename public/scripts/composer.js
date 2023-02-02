@@ -1,6 +1,7 @@
 $(document).ready(function () {
+// a function for scrolling up button
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     const scrollTop = $(this).scrollTop();
     if (scrollTop > 100) {
       $("#page-scrollUp").show();
@@ -13,7 +14,6 @@ $(document).ready(function () {
     event.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, 100);
     $(".new-tweet").slideDown("medium");
-    $('#tweet-text').focus();
+    $("#tweet-text").focus();
   });
 });
-

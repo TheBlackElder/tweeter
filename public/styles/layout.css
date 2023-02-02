@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -17,7 +19,7 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px; 
+  font-size: 24px;
   margin-bottom: 2em;
 }
 
@@ -25,21 +27,27 @@ main {
   width: 90%;
   background-color: #f4f1ec;
   /* display: flex;  */
-  flex-direction:column;
-  justify-content:center;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-left: 5%;
   margin-right: 5%;
-  
 }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-  
-  /* Source Sans Pro for body */
-  html { 
-    font-family: 'Source Sans Pro', sans-serif;
-  
-  }
- 
 
+/* Source Sans Pro for body */
+html {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  .container {
+    margin-top: 10em;
+  }
+}

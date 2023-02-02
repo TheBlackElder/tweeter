@@ -9,7 +9,10 @@
   margin-bottom: 100px;
   background-color: blanchedalmond;
   background-image: url("https://www.transparenttextures.com/patterns/gradient-squares.png");
+}
 
+p {
+  font-size: 35px;
 }
 
 img {
@@ -17,4 +20,10 @@ img {
   height: auto;
 }
 
-
+@media only screen and (min-width: 1024px) {
+  .top-header {
+    margin-top: 10em;
+    width: 50%;
+    margin-left: 3em;
+  }
+}
