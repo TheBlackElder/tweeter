@@ -1,12 +1,18 @@
-# Tweeter Project
+# Tweeter Project  
 
 Tweeter is a simple, single-page Twitter clone that uses  HTML, CSS, JS, jQuery and AJAX.
 
 ## Features
 
++ This responsive web application allows users to send their own messages out into the world (as long as they keep it under 140 characters).
++ The right side of the navigation bar is a toggle button that slides down the tweet box making it visible, and then focuses in on the text area.
++ If the tweet box is visible, one click on the navigation toggle button slides the tweet box up making it hidden.
++ While scrolling through a page of posts, a second animated toggle button appears on the bottom right side allowing users to be brought back up to the tweet box at the top of the page. 
++ The use of CSS box-shadows, animations and hovers assist in identifying the clickable features on the page.
+
 
 ![Screenshot of main page ](https://github.com/TheBlackElder/tweeter/blob/master/docs/main-tweeter.png?raw=true)
-![Screenshot of mobile view]( )
+![Screenshot of mobile view](https://github.com/TheBlackElder/tweeter/blob/master/docs/mobile-scroll.png?raw=true)
 ![Screenshot of tweet error](https://github.com/TheBlackElder/tweeter/blob/master/docs/tweet-error.png?raw=true)
 
 ## Getting Started
