@@ -6,33 +6,16 @@
 
 $(document).ready(function () {
   // Test / driver code (temporary). Eventually will get this from the server.
-  const data = [
-    {
-      user: {
-        name: "Newton",
-        avatars: "https://i.imgur.com/73hZDYK.png",
-        handle: "@SirIsaac",
-      },
-      content: {
-        text: "If I have seen further it is by standing on the shoulders of giants",
-      },
-      created_at: 1461116232227,
-    },
-    {
-      user: {
-        name: "Descartes",
-        avatars: "https://i.imgur.com/nlhLi3I.png",
-        handle: "@rd",
-      },
-      content: {
-        text: "Je pense , donc je suis",
-      },
-      created_at: 1461113959088,
-    },
-  ];
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   const renderTweets = function (tweets) {
     console.log("Which tweets", tweets);
+   
     // loops through tweets
     for (let tweet of tweets) {
       // calls createTweetElement for each tweet
@@ -56,7 +39,7 @@ $(document).ready(function () {
   </label>
 </header>
 <span class="tweet-body">
- ${tweet.content.text}
+ ${escape(tweet.content.text)}
 </span>
 <footer class="tweet-footerIcons" >
   <label class="tweet-time">
@@ -76,21 +59,36 @@ $(document).ready(function () {
 
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
+  
     let tweetText = $("#tweet-text").val();
     let maxTweetLength = 140;
+    console.log(tweetText.length);
     if (tweetText.length === 0) {
-      alert("No content detected");
+     
+      const errorText = $('<i class="fa-solid fa-triangle-exclamation"></i> <span>No content detected</span>');
+      $('.new-tweet-error').html(errorText);
+      $('.new-tweet-error').slideDown();
+     
     } else if (tweetText.length > maxTweetLength) {
-      alert("Surpassed valid character limit of 140 characters");
+      
+      const errorText = $('<i class="fa-solid fa-triangle-exclamation"></i> <span>Surpassed valid character limit of 140 characters</span>');
+      $('.new-tweet-error').html(errorText);
+      $('.new-tweet-error').slideDown();
+    
     } else {
-      console.log("tweet text is:", tweetText);
+      $('.new-tweet-error').slideUp();
       $.ajax("/tweets", { method: "POST", data: $(this).serialize() }).then(
         () => {
           console.log("success");
+          $(".tweet-container").empty();
+          $('.tweet-form')[0].reset();
+          loadTweets();
         }
       );
     }
   });
+
+ 
 
   const loadTweets = function () {
     $.ajax("/tweets/", { method: "GET" }).then((tweets) =>
@@ -100,3 +98,12 @@ $(document).ready(function () {
   loadTweets();
 });
 
+
+
+// $( document.body ).click(function () {
+//   if ( $( "div" ).first().is( ":hidden" ) ) {
+//     $( "div" ).slideDown( "slow" );
+//   } else {
+//     $( "div" ).hide();
+//   }
+// });

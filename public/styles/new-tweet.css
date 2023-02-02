@@ -51,3 +51,27 @@
   color: red;
 }
 
+.new-tweet-error {
+  /* background: #c51244 !important;
+  border-radius: 0 !important;
+  position: relative; 
+  display: inline-block !important;
+  box-shadow: 1px 1px 1px #aaaaaa;
+  margin-top: 10px; */
+
+  color: #ba3939;
+  background: #ffe0e0;
+  border: 1px solid #a33a3a;
+  width: inherit;
+  text-align: center;
+  box-shadow: 1px 1px 1px #aaaaaa;
+  display: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+ 
+
+
+}
+
+

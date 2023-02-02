@@ -11,6 +11,7 @@ $(document).ready(function () {
       count.addClass("countLimit");
     } else {
       count.removeClass("countLimit");
+      $('.new-tweet-error').slideUp();
     }
   });
 });
@@ -34,3 +35,4 @@ $(document).ready(function () {
 //     }
 //   });
 // });
+
