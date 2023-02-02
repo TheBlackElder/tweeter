@@ -5,9 +5,12 @@ Tweeter is a simple, single-page Twitter clone that uses  HTML, CSS, JS, jQuery 
 ## Features
 
 
+![Screenshot of main page ](https://github.com/TheBlackElder/tweeter/blob/master/docs/main-tweeter.png?raw=true)
+![Screenshot of mobile view]( )
+![Screenshot of tweet error](https://github.com/TheBlackElder/tweeter/blob/master/docs/tweet-error.png?raw=true)
+
 ## Getting Started
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
 
 1. Fork this repository, then clone your fork of this repository.
 2. Install dependencies using the `npm install` command.
