@@ -5,7 +5,12 @@
  */
 
 $(document).ready(function () {
-  // Test / driver code (temporary). Eventually will get this from the server.
+
+
+  $(".right-navbar").on("click", function () {
+    $('.new-tweet').toggle();
+    $('#tweet-text').focus();
+  });
 
   const escape = function (str) {
     let div = document.createElement("div");
@@ -99,11 +104,3 @@ $(document).ready(function () {
 });
 
 
-
-// $( document.body ).click(function () {
-//   if ( $( "div" ).first().is( ":hidden" ) ) {
-//     $( "div" ).slideDown( "slow" );
-//   } else {
-//     $( "div" ).hide();
-//   }
-// });
